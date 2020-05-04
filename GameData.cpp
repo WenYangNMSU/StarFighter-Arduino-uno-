@@ -153,12 +153,14 @@ void GameData::spawnCell(byte y, byte x) {
       if(*(positionGrid + (y + 1) * gridSize[1] + x) == playerBullet) {
         cleanCell(y + 1, x);
         increaseScore(enermy1Bullet, enermy1Bullet);
+        return;
       }
 
       // if the cell contains player, decrease life by 1 and add bullet score.
       if(*(positionGrid + (y + 1) * gridSize[1] + x) == player) {
         life--;
         increaseScore(enermy1Bullet, enermy1Bullet);
+        return;
       }
        
       *(positionGrid + (y + 1) * gridSize[1] + x) = enermy1Bullet;

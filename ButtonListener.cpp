@@ -23,7 +23,7 @@ ButtonListener::ButtonListener(int inWKey, int inAKey, int inXKey, int inDKey, i
 void ButtonListener::takeInput(char *movement, byte *fire) {
   // currently we don't have a fire key.
   // so constant fire.
-  if (true/*digitalRead(fKey) == LOW*/) {
+  if (digitalRead(fKey) == LOW) {
     *fire = true;
   }
 

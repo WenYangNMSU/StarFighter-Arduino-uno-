@@ -10,7 +10,7 @@
 #define X_PIN 7
 #define A_PIN 12
 #define D_PIN 4
-#define F_PIN 12
+#define F_PIN 19
 
 #include "TimedAction.h"
 #include "GameData.h"
@@ -36,9 +36,9 @@ TimedAction musicUpdate = TimedAction(125, musicUpdateWrapper);
 
 void setup() {
   Serial.begin(115200);
-//  debug();
+  debug();
 //  keyboardMode();
-  start();
+//  start();
 //  buttonTest();
 }
 void loop() {}
